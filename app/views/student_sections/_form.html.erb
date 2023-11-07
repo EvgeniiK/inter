@@ -1,0 +1,21 @@
+<%= form_with(model: student_section, local: true) do |form| %>
+  <% if student_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student_section.errors.count, "error") %> prohibited this subject from being saved:</h2>
+      <ul>
+        <% student_section.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='field'>
+    <%= form.label "Select section" %>
+    <%= form.select :section_id, options_from_collection_for_select(@available_sections, :id, :name), {} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Add a section" %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+section_literature:
+  name: literature
+  teacher: teacher_without_subjects
+  classroom: room_1e
+  subject: subject_without_teacher
+
+section_physics:
+  name: physics
+  teacher: teacher_without_subjects
+  classroom: room_2b
+  subject: math
+
+section_history:
+  name: history
+  teacher: english_teacher
+  classroom: room_2b
+  subject: english

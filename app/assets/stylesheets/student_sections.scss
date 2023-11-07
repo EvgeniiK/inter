@@ -1,0 +1,14 @@
+.split-container {
+  display: flex;
+}
+
+.left-section {
+  flex: 1;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+}

@@ -1,0 +1,57 @@
+<div class="split-container">
+  <div class="left-section">
+
+    <h1>Sections</h1>
+    <br>
+
+    <% SectionSchedule.week_days.keys.each do |week_day| %>
+        <h2><%= week_day %></h2>
+        <table>
+          <thead>
+            <tr>
+              <th><b>Section</b></th>
+              <th>Subject</th>
+              <th>Teacher</th>
+              <th>Room</th>
+              <th>Starts</th>
+              <th>Duration (min)</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+          <% @section_schedules.slice(week_day, nil).values.flatten.each do |schedule| %>
+              <tr>
+                <td><%= schedule.section.name %></td>
+                <td><%= schedule.section.subject.name %></td>
+                <td><%= schedule.section.teacher.first_and_last_name %></td>
+                <td><%= schedule.section.classroom.number %></td>
+                <td><%= schedule.start_at_humanized %></td>
+                <td><%= schedule.duration %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+    <% end %>
+  </div>
+
+  <div class="right-section">
+    <p id="notice"><%= notice %></p>
+    <% if @available_sections.present? %>
+      <%= render 'form', student_section: @student_section %>
+    <% else %>
+      <p>No more sections can be added</p>
+    <% end %>
+
+
+    <h1>Your Sections</h1>
+    <% @student_sections.each do |student_section| %>
+      <%= link_to 'Destroy', student_section, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= render 'sections/sections_table', sections: [student_section.section] %>
+
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,8 @@
+base_student:
+  first_name: John
+  last_name: Smith
+  email: test@test.com
+additional_student:
+  first_name: NotJohn
+  last_name: ButSmith
+  email: test1@test.com

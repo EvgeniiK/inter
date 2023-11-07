@@ -1,0 +1,34 @@
+monday_1500:
+  section: section_physics
+  start_at: '15:00'
+  end_at: '15:50'
+  week_day: 'Monday'
+
+monday_1600:
+  section: section_history
+  start_at: '16:00'
+  end_at: '16:50'
+  week_day: 'Monday'
+
+tuesday_730:
+  section: section_physics
+  start_at: '7:30'
+  end_at: '8:20'
+  week_day: 'Tuesday'
+
+thursday_1200:
+  section: section_physics
+  start_at: '12:00'
+  end_at: '13:30'
+  week_day: 'Thursday'
+
+thursday_1300:
+  section: section_history
+  start_at: '13:00'
+  end_at: '13:50'
+  week_day: 'Thursday'
+
+each_day_800:
+  section: section_literature
+  start_at: '8:00'
+  end_at: '8:50'
